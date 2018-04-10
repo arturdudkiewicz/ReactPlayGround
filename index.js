@@ -1,1 +1,1 @@
-ReactDom
+ReactDom.{}
