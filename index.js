@@ -7,11 +7,14 @@ function AppHeader() {
           Lista kontaktów
         </a>
         <div className="header item">
-          <button className="ui button">Dodaj</button>
+          <button onClick={onClickHandler} className="ui button">Dodaj</button>
         </div>
       </nav>
     </header>
   );
+}
+function onClickHandler() {
+  console.log("Click");
 }
 function ContactList() {
   return (
