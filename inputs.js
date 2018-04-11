@@ -1,24 +1,25 @@
-class NameForm extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      first: "",
-      last: ""
+      firstName: '',
+      lastName: ''
     };
-    this.handleChange = this.handleChange.bind(this);
+  }
+  firstNameChange(event) {
+    this.setState({firstName: event.target.value})
+  }
+  lastNameChange(event) {
+    this.setState({lastName: event.target.value})
   }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
   render() {
-    return <div>
-      <label>
-        First
-      <input type="text" name="last" oninput="{" this.handlechange="" }="" </label <label Last
-        <input type="text" <hr <output {this.state.last}/> > > /> > /> >{this.state.first} </output>
-    </div>;
+    return (<div>
+      <input type="text" value={this.state.firstName} onInput={this.firstNameChange.bind(this)}/>
+      <input type="text" value={this.state.lastName} onInput={this.lastNameChange.bind(this)}/>
+      <output>{`${this.state.firstName} ${this.state.lastName}`}</output>
+    </div>)
   }
 }
+
+ReactDOM.render(<App/>, document.getElementById("app"));
