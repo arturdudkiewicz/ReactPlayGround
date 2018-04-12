@@ -17,7 +17,7 @@ class App extends React.Component {
     return (<div>
       <input type="text" value={this.state.firstName} onInput={this.firstNameChange.bind(this)}/>
       <input type="text" value={this.state.lastName} onInput={this.lastNameChange.bind(this)}/>
-      <output>{`${this.state.firstName} ${this.state.lastName}`}</output>
+      <output>test{`${this.state.firstName} ${this.state.lastName}`}</output>
     </div>)
   }
 }
